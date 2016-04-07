@@ -10,7 +10,7 @@ install.phantom(path)
 \item{path}{Path to executable 'phantomJS' binary, downloadble from \url{http://phantomjs.org/download.html}}
 }
 \value{
-The function is void
+The function does not return anything
 }
 \description{
 The \code{install.phantom()} function takes the path to executable

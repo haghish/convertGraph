@@ -65,20 +65,25 @@ convertGraph <- function(from, to, size = 1.0, path = NULL) {
             path <- read[length(read)]
             file.exists(path)
             #warnings(paste('the path to phantomJS was retreived from your ',
-            #'latest defined path which is:\n', path))
+            # "latest defined path which is:\n", path))
         }
         else {
             err <- paste("'phantomJS' was not specified. Download phantomJS",
-            "from  http://phantomjs.org/download.html  and specify the path to",
+            "from 'http://phantomjs.org/download.html' and specify the path to",
             "executable binary...")
             stop(err)
         }
     }
 
+    # ---------------------------------------------------------
+    # PREPARE THE FILES
+    #   - catch the JS commands
+    #   - check for magnification and if it specified, create an html file
+    #   - execute 'phantomJS' script
+    #   -
+    # =========================================================
     command <- system.file("lib/command.js", package = "convertGraph")
     phantomJS <- paste("'", file_path_as_absolute(path), "'", sep = "")
-    file_ext(phantomJS)
-    file_ext(command)
 
     #if (width != 600 | height != 450) {
     #    src <- system.file("lib/command.js", package = "convertGraph")
@@ -90,9 +95,7 @@ convertGraph <- function(from, to, size = 1.0, path = NULL) {
 
     if (size > 1.0) {
         from <- file_path_as_absolute(from)
-        #html <- file.path(getwd(), "_temp_by_convertGraph.html")
         html <- tempfile(pattern = "file", tmpdir = tempdir(), fileext = ".html")
-        #file.create(html)
         content <- paste('<!doctype html>\n<head>\n<style type="text/css">\n
             body {zoom: ', size,';}\n</style>\n</head>\n<body>\n
             <img src="', from, '" />\n</body>\n</html>\n', sep = "")
@@ -102,9 +105,5 @@ convertGraph <- function(from, to, size = 1.0, path = NULL) {
     else {
         phantomScript <- paste(phantomJS, command, from, to, sep = " ")
     }
-
-    #print(phantomScript)
     system(phantomScript)
-    #system(phantomJS)
-
 }
