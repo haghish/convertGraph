@@ -37,29 +37,42 @@
 #' @importFrom tools file_ext
 
 
+
+
+
 convertGraph <- function(from, to, size = 1.0, path = NULL) {
     #, setup = FALSE
     #, width = 600, height = 450  #removed arguments
 
-
+    # ---------------------------------------------------------
+    # SYNTAX PROCESSING
+    #   - check the arguments
+    #   - if "path" is specified, memorize it
+    #   - if "path" is not specified, try to access the last absolute path
+    #   - else require 'phantomJS' with an error
+    # =========================================================
     if (!is.null(path)) {
         if (file.exists(path)) {
+            path <- file_path_as_absolute(path)
             memory <- system.file("PATHMEMORY", package = "convertGraph")
             write(path, file=memory, append=TRUE)
         }
     }
     else {
-        #check the memory file and return a 'Note'
         memory <- system.file("PATHMEMORY", package = "convertGraph")
         read <- readLines(memory)
         if (length(read) > 0) {
             path <- read[length(read)]
-            warnings(paste('the path to phantomJS was retreived from your ',
-            'latest defined path which is:\n', path))
             file.exists(path)
+            #warnings(paste('the path to phantomJS was retreived from your ',
+            #'latest defined path which is:\n', path))
         }
-
-        #get the path or return an install request
+        else {
+            err <- paste("'phantomJS' was not specified. Download phantomJS",
+            "from  http://phantomjs.org/download.html  and specify the path to",
+            "executable binary...")
+            stop(err)
+        }
     }
 
     command <- system.file("lib/command.js", package = "convertGraph")

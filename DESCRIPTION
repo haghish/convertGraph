@@ -11,10 +11,10 @@ Description: The 'convertGraphic' package converts graphical file formats (SVG,
     PDF format, which can be created from others graphical formats.
     The package provides a solution for converting SVG file format to PNG which
     is often needed for exporting graphical files produced by R widgets.
-URL: http://haghish.com/dot
-BugReports: http://github.com/haghish/DOT
+URL: http://github.com/haghish/convertGraph
+BugReports: http://github.com/haghish/convertGraph
 Imports: tools
 NeedsCompilation: no
-License: MIT
+License: MIT + file LICENSE
 Repository: CRAN
 RoxygenNote: 5.0.1

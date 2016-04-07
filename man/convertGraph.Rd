@@ -11,7 +11,7 @@ convertGraph(from, to, size = 1.0, path = NULL)
 
 \item{to}{The file name and extension of the converted file}
 
-\item{size}{Enlarge the converted graphical file by magnifying its resolution with the given ratio}
+\item{size}{Enlarge the converted graphical file by magnifying its resolution with the given number}
 
 \item{path}{Path to executable 'phantomJS' binary, downloadble from \url{http://phantomjs.org/download.html}}
 }
@@ -19,7 +19,7 @@ convertGraph(from, to, size = 1.0, path = NULL)
 Converts the given graphical file to the specified file format.
 }
 \description{
-The \code{convertGraphic} package converts graphical file formats to one another. The exceptions are the \code{SVG} file format that can only be converted to other formats and in contrast, \code{PDF} format, which can be created from others graphical formats. Nevertheless, the package provides a solution for converting SVG file format to PNG which is often needed for exporting graphical files produced by widgets.
+The \code{convertGraphic} package converts graphical file formats (SVG, PNG, JPEG, BMP, GIF, PDF, etc) to one another. The exceptions are the \code{SVG} file format that can only be converted to other formats and in contrast, \code{PDF} format, which can be created from others graphical formats. The package provides a solution for converting SVG file format to PNG which is often needed for exporting graphical files produced by R widgets.
 }
 \examples{
 \dontrun{
