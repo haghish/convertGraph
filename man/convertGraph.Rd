@@ -19,7 +19,7 @@ convertGraph(from, to, size = 1.0, path = NULL)
 Converts the given graphical file to the specified file format.
 }
 \description{
-The \code{convertGraphic} package converts graphical file formats (SVG, PNG, JPEG, BMP, GIF, PDF, etc) to one another. The exceptions are the \code{SVG} file format that can only be converted to other formats and in contrast, \code{PDF} format, which can be created from others graphical formats. The package provides a solution for converting SVG file format to PNG which is often needed for exporting graphical files produced by R widgets.
+Converts graphical file formats (SVG, PNG, JPEG, BMP, GIF, PDF, etc) to one another. The exceptions are the SVG file format that can only be converted to other formats and in contrast, PDF format, which can only be created from others graphical formats. The main purpose of the package was to provide a solution for converting SVG file format to PNG which is often needed for exporting graphical files produced by R widgets.
 }
 \examples{
 \dontrun{

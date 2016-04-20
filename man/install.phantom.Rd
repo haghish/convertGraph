@@ -13,8 +13,8 @@ install.phantom(path)
 The function does not return anything
 }
 \description{
-The \code{install.phantom()} function takes the path to executable
-\code{'phantomJS'} binary and memorizes it for future calls. PhantomJS binary
+takes the path to executable
+\code{'phantomJS'} binary and memorizes its absolute path for future calls. PhantomJS binary
 can be downloaded from \url{http://phantomjs.org/download.html}
 }
 \examples{
