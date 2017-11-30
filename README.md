@@ -8,10 +8,10 @@ For example, to export SVG file to PNG, PDF, JPEG, or GIF with a customized reso
 JPEG, etc. 
 
 The `convertGraph` package provides a solution for that. It **does not require RStudio** and is fully functional within R. 
-In addition, it allows you to increase the resolution of exported file. 
+In addition, it allows you to adjust the resolution of exported file to any size and quality. 
 
 `convertGraph` is hosted on CRAN and can be installed by :
 
 > `install.packages("convertGraph")`
 
-
+The package relies on [PhantomJS](http://phantomjs.org/) binaries. simply download and unzip the binaries and provide the path to `convertGraph` function. 
