@@ -1,3 +1,7 @@
+[![](https://cranlogs.r-pkg.org/badges/convertGraph)](https://cran.r-project.org/package=convertGraph) [![](https://cranlogs.r-pkg.org/badges/grand-total/convertGraph?color=orange)](https://cran.r-project.org/package=convertGraph)
+
+- - -
+
 # convertGraph
 #### An R package for converting graphical files to one another
 
