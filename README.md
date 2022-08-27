@@ -1,6 +1,3 @@
-[![](https://cranlogs.r-pkg.org/badges/convertGraph)](https://cran.r-project.org/package=convertGraph) [![](https://cranlogs.r-pkg.org/badges/grand-total/convertGraph?color=orange)](https://cran.r-project.org/package=convertGraph)
-
-- - -
 
 <a href="https://github.com/haghish/convertGraph"><img src='man/figures/logo.PNG' align="right" height="200" /></a>
 
