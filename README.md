@@ -2,7 +2,7 @@
 
 - - -
 
-<a href="https://github.com/haghish/convertGraph"><img src='man/figures/logo.png' align="right" height="200" /></a>
+<a href="https://github.com/haghish/convertGraph"><img src='man/figures/logo.PNG' align="right" height="200" /></a>
 
 # `convertGraph` : An R package for converting graphical files to one another
 
